@@ -1,0 +1,225 @@
+/* Perbaiki Responsive Layar */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*desain navbar*/
+header {
+  background-color: #181d31;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1224px;
+  width: 92%;
+  margin: 0 auto;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-branding {
+  font-size: 25px;
+  width: 44px;
+  height: 44px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+.nav-link {
+  transition: 0.3s ease-out;
+}
+
+.nav-link:hover {
+  color: rgb(27, 27, 27);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Jumbotron */
+.jumbotron img {
+  width: 100%;
+}
+
+.content__heading {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+/*  Main  */
+/* .headline-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+} */
+
+.restaurants-item {
+  display: inline-block;
+  background-color: #678983;
+  color: #fffae6;
+  box-sizing: border-box;
+  overflow: visible;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* .card-item-title {
+  position: absolute;
+  padding: 10px;
+  color: #678983;
+  font-size: 1.5em;
+  background-color: #fffae6;
+} */
+
+/* .card img {
+  display: inline-block;
+  width: 100%;
+}
+.card-item-description {
+  padding: 20px;
+}
+
+.card-item-description h4 {
+  font-size: 1.5em;
+  padding-bottom: 5px;
+}
+.card-item-description h3 {
+  font-size: 1.7em;
+  padding-bottom: 10px;
+}
+.card-item-description p {
+  font-size: 18px;
+} */
+
+/* membuat footer */
+footer {
+  margin-top: 40px;
+  color: white;
+  background-color: #181d31;
+  font-weight: bold;
+}
+.title-footer {
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+}
+
+/* membuat fokus */
+div[tabindex='0']:focus {
+  outline: 4px solid black;
+}
+
+/*membuat skip content*/
+.skip-link {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  background-color: #ffcc00;
+  color: #ffffff;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Responsive */
+/* Small (Handphone dll) */
+@media (max-width: 576px) {
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+  .restaurants {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 1200px) {
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px;
+  }
+}
